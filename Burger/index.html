@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UFT-8">
+	<title>Online Burger Cafe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Cormorant+Garamond:wght@700&family=EB+Garamond:ital,wght@1,500&family=Playfair+Display:ital,wght@0,700;1,400;1,500&family=Poppins:wght@200;700;800&family=Red+Hat+Mono&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Playfair+Display:ital,wght@1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!---Bootstrap Css-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style type="text/css">
+     html{
+   	scroll-behavior: smooth;
+   }
+   body{
+   	margin: 0;
+   	padding: 0;
+   	font-size: 15px;
+   	font-family: 'Poppins';
+   	color: white;
+   	background:rgb(112,128,144);
+  
+  }
+
+   h1,h2,h3,h4,h5,h6{
+   	font-weight: 700;
+   	letter-spacing: 1px;
+   	text-transform: uppercase;
+   	color: #ffff;
+   }
+   a{
+   	color:white;
+      font-weight:700;
+      transition: all 0.4s ease;
+   }
+   img{
+   	width: 100%;
+     
+   }
+   .sticky-nav{
+   	position: sticky;
+   	top: 0px;
+   	padding: 0px;
+   	z-index: 1;
+   	align-self: auto;
+   	order: 0;
+    background-color: rgb(22, 34, 64);
+
+   
+   }
+   .navbar-brand{
+   	font-size: 2.2rem;
+   	color: white;
+
+   }
+   .navbar-toggler{
+   	border: none;
+   	padding: 10px 6px;
+   	outline: none;
+   }
+   .navbar-toggler span{
+   	display: block ;
+   	width: 22px;
+   	height: 2px;
+   	border: 1px;
+   	color: white;
+   	background: #ffff;
+   }
+    .navbar-toggler span + span{
+           margin-top: 4px;
+           width: 22px;
+    }
+    .navbar-toggler span + span + span{
+    	width: 22px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+    	padding: 1-4rem 2rem;
+    	font-size: 1rem;
+    	position: relative;
+      margin: 30px;
+    	
+    }
+    .nav-link .active{
+       background: -webkit-linear-gradient(#eee, #333);
+       
+  
+  -webkit-text-fill-color: transparent;
+    }
+    .btn{
+    	background-color: #E89020;
+    	color: white;
+    	border-radius: 10px;
+    	padding: 1rem 1.5rem;
+    	font-size: 1.2rem;
+    }
+    .btn :hover{
+    	background-color:#DFD7D1;
+    	color: #fff;
+    }
+    .heading{
+    	font-size: 5rem;
+    	font-weight: bold;
+    	line-height: 1.4;
+    	text-align: center;
+    	color:  #fff;
+    	margin-top: 180px;
+    	margin-bottom: 8px;
+    	min-height: 100px;
+    }
+    #home{
+    	 background: linear-gradient(rgba(12,32,59,0.5), rgba(12,32,59,0.8)),url("images/bg1.jpeg");
+    	min-height: 100vh;
+    	background-size:auto,cover;
+    	background-position: center;
+    	background-attachment: fixed;
+    	align-items: center;
+    }
+    
+    .service .service-img .icon i{
+    	font-size: 34px;
+
+    }
+    @media (max-width: 991.98px) {}
+  .sticky-nav #home{
+    margin-left: -11%;
+    margin-right: -11%;
+  }
+  @media (max-width: 767px) {}
+  #home .sticky-nav {
+    padding: 75px 0px;
+    margin-left: -11%;
+    margin-right: -11%;
+  }
+    @media (max-width: 991px) {
+  #home #home-wrapper {
+    max-width: 850px !important;
+    padding: 0px 60px;
+  }
+ }
+ @media (max-width: 576px) {}
+  #home #home-wrapper {
+    padding: 0px 40px;
+  }
+   @media (max-width: 767px) {}
+  .body{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: normal;
+  }
+  @media (max-width: 767px) {}
+  .body .service-img p{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: normal;
+  }
+
+   
+ </style>
+</head>
+<body>
+<div class="header-background">
+	<div id ="nav" class="sticky-nav">
+		
+		<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href=""><img src ="images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="page2.php">Speciality</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="page3.php">Popular</a>
+          <li class="nav-item">
+          <a class="nav-link active" href="page4.html">Gallery</a>
+       </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="page5.html">Review</a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<section id="home">
+	<div class="container text-center">
+		<div class="row justify-content-center">
+			<div  class="col-md-10">
+			<h1 class="text-white display-4"style="font-family:'Poppins',sans-serif;font-weight:700;padding: 100px 0px;">Good Things<br>Have a way of Coming Together</h1>
+			<p class="text-white"style="font-family:'Poppins', sans-serif;font-size:25px;">This is a great place for you to chill out, eat as much as you need, and grow. Hard work should be rewarded by good food and people who love to eat are always the best people.</p>
+				</div>
+		</div>
+	</div>
+</section>
+<section id ="Appendex" class="text-center">
+  <div class="container">
+    <div class="col-12 section-intro">     
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="service"style="text-align: center;">
+        <div class="service-img">
+        <h5 class="mt-5 pt-4"style="font-family:'Poppins', sans-serif;">Visit Us</h5>
+        <p style="font-family:'Poppins', sans-serif;">Online Burger Cafe <br>Leonor Building<br>2A San Pedro St<br>Poblacion District<br>Davao City<br>8000 Davao del Sur</p>
+        </div>
+    </div>
+    </div>
+      <div class="col-md-4">
+      <div class="service">
+        <div class="service-img">
+        <h5 class="mt-5 pt-4">About Us</h5>
+        <p style="font-family:'Poppins', sans-serif;">Online Burger Cafe was created in this Year 2022 <br>out of a passion for amazing food and service.<br>The operation saw rapid growth after many customers<br> will come and about these new cafe.<br>We believe that using freshies and imported<br> ingredients produces best results. <br>We are tireless in staying<br>abreast of the latest food trends.<br>And we are obbesseed creating customized<br> menus and culinary masterpiece.</p>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-4">
+      <div class="service">
+        <div class="service-img">
+        <h5 class="mt-5 pt-4">Services</h5>
+        <p style="font-family:'Poppins', sans-serif;">We care about your health <br>and your food choices. We<br>make-gluten free,vegan meals. In<br>case of food intolerance or allergies,<br> we will prepare a meal suited to your needs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service">
+        <div class="service-img" >
+        <h5 class="mt-5 pt-4"style="font-family:'Poppins', sans-serif;">Contact Us</h5>
+        <p style="font-family:'Poppins', sans-serif;">Tel No.:(082) 241-1000<br>GLobe.:(+63) 946-137-0646<br>Smart.:(+63) 938-196-2502<br>Email Address:<br>onlineburgercafe@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service">
+        <div class="service-img" >
+        <h5 class="mt-5 pt-4"style="font-family:'Poppins', sans-serif;">Doing Business</h5>
+        <p style="font-family:'Poppins', sans-serif;">A good cafe never goes out of style and if your thinking about making an addition to your current menu, or you want to open a cafe that feaatures Filipino's favorite fast food item, you must do a SWOT analysis before you make a final decision. This is an important burger industry analysis that must be included in any burger house business plan that you create. It can help you to determine, whether or not the market demand matches your enthusiasm, and identify strenghts and weaknesses, oppotunities and threats that indicate how successful foray into burger cafe and other cafe's world be and likely consiquences of your decision.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service">
+        <div class="service-img" >
+        <h5 class="mt-5 pt-4"style="font-family:'Poppins', sans-serif;">Social Media</h5>
+        <p style="font-family:'Poppins', sans-serif;">Facebook<br>Instagram<br>Twitter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+  <br>
+     <hr>
+     <footer>
+          <p>
+            <a>2022 Online Burger Cafe. All Right Reserved. Design and Development | Made with &#10084;&#65039; by Aldrin C. Abilar</a>                
+          </p>
+          </footer>
+    </div>
+</section>
+</body>
+</html>
